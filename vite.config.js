@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-//import Sitemap from 'vite-plugin-sitemap';
+//import Sitemap from 'vite-plugin-sitemap'; // Commented out
 import { createHtmlPlugin } from 'vite-plugin-html';
 
 const routes = [
@@ -17,11 +17,11 @@ export default defineConfig({
   base: '/', // Remove '/kedi-labs/' since you're using custom domain
   plugins: [
     react(),
-    Sitemap({
-      hostname: 'https://www.kedilabs.net', // Your actual domain
-      routes,
-      generateRobotsTxt: true,
-    }),
+    // Sitemap({  // REMOVE THIS ENTIRE BLOCK
+    //   hostname: 'https://www.kedilabs.net',
+    //   routes,
+    //   generateRobotsTxt: true,
+    // }),
     createHtmlPlugin({
       minify: true,
       inject: {
