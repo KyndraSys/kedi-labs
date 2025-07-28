@@ -4,21 +4,21 @@ import Sitemap from 'vite-plugin-sitemap';
 import { createHtmlPlugin } from 'vite-plugin-html';
 
 const routes = [
-  { path: '/', name: 'Home' },
-  { path: '/about', name: 'About' },
-  { path: '/programs', name: 'Programs' },
-  { path: '/partners', name: 'Partners' },
-  { path: '/blog', name: 'Blog' },
-  { path: '/blog/blogdetail', name: 'Blog Detail' },
-  { path: '/contact', name: 'Contact' },
+  '/',
+  '/about',
+  '/programs',
+  '/partners',
+  '/blog',
+  '/blog/blogdetail',
+  '/contact',
 ];
 
 export default defineConfig({
-  base: '/kedi-labs/', // Matches GitHub Pages URL structure
+  base: '/', // Remove '/kedi-labs/' since you're using custom domain
   plugins: [
     react(),
     Sitemap({
-      hostname: 'https://kyndrasys.github.io/kedi-labs/', // Temporary for testing
+      hostname: 'https://www.kedilabs.net', // Your actual domain
       routes,
       generateRobotsTxt: true,
     }),
