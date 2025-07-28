@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.kedilabs.net/sitemap.xml
+
+
+
+
+
+      {/* Technology Categories */}
+      <section id="technology-categories" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+              Browse by technology
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {technologyCategories.map((category, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className="bg-white border-2 border-gray-100 rounded-3xl p-8 text-center hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex justify-center mb-6">
+                    <div className="p-4 text-blue-500 group-hover:text-blue-600 transition-colors">
+                      {category.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    {category.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {category.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center space-x-4">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+              View all programs
+            </button>
+            <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300">
+              Why Kedi Labs for the digital era
+            </button>
+          </div>
+        </div>
+      </section>
