@@ -99,13 +99,13 @@ const KediLabsHomepage = () => {
       title: "Virtual Labs Toolkit Implementation Across Kenyan Schools",
       description: "Comprehensive virtual laboratory solutions being deployed to schools nationwide, providing hands-on STEM learning experiences without physical infrastructure constraints.",
       link: "Explore virtual labs program",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySpJd3OqCJ1QwsdRZ4V8Y9rc0AUkWXjLbotxDu"
     },
     {
       title: "STEM Educator Digital Training Initiative",
       description: "Intensive training and sensitization programs for STEM educators, focusing on digital pedagogy and virtual laboratory instruction techniques.",
       link: "Learn about educator training",
-      image: "https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySz4EOOg9xZSQRAhT1skLN32yGtOK6VwfcIiej"
     },
     {
       title: "Digital Education Policy Advocacy Framework",

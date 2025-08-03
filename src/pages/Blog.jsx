@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ChevronRight, 
@@ -21,10 +22,11 @@ import {
 } from 'lucide-react';
 
 const Blog = () => {
-  const navigate = useNavigate();
+
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
+  const [activeSection, setActiveSection] = useState(null);
+  const [isVisible, setIsVisible] = useState({});
   const categories = [
     { id: 'all', name: 'All Articles', count: 1 },
     { id: 'engineering', name: 'Engineering Education', count: 1 },

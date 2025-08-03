@@ -27,14 +27,17 @@ class ErrorBoundary extends Component {
       return (
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-red-600 mb-4">Oops! Something went wrong</h1>
-            <p className="text-gray-600 mb-4">We're sorry for the inconvenience. Please try refreshing the page.</p>
-            <button 
-              onClick={() => window.location.reload()} 
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Refresh Page
-            </button>
+           <h1 className="text-2xl font-bold text-red-600 mb-4">Temporal glitch detected!</h1>
+<p className="text-gray-600 mb-4">Looks like reality blinked. Try contacting support below.</p>
+<a
+  href="https://wa.me/254113904796?text=%22Seems%20you%20didn%E2%80%99t%20cook%20well%20enough%2C%22%20Kedi%20Labs."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+>
+  Contact Support
+</a>
+
           </div>
         </div>
       );

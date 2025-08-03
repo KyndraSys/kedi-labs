@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ChevronRight, 
-  ArrowRight, 
   Calendar,
   User,
   Tag,
@@ -40,50 +39,78 @@ const BlogDetail = () => {
     tags: ["AI", "Engineering", "Education Technology", "Digital Learning", "African Innovation"]
   };
 
+  const imageUrls = [
+     'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySQceq6tHq8wejWv4EL73ZiPnDTRY5UX9fINxp',
+        'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySyuNMXLl6BzTOXhQ0IFf9tJaNWbkV54jnMqYv',
+    'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySpJd3OqCJ1QwsdRZ4V8Y9rc0AUkWXjLbotxDu',
+
+    'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySJcWhOknxb3wmZfK4PYa6gTQX5Vkn8HlyAvcB',
+
+
+    'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySz4EOOg9xZSQRAhT1skLN32yGtOK6VwfcIiej',
+        'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1yS4Lk6LUc6OHIMKTrLbfN4sDnJ05FPphYEZlia',
+    'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1yS8SIXPkK7e6Tf94rNQJncmv1dYwMOks3FXCAS',
+    'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySjLRZny74fG3u9lB5FkZEaSMHhcCiIPerswm2',
+    'https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySzZOF1m9xZSQRAhT1skLN32yGtOK6VwfcIiej'
+   
+  ];
+
   const galleryImages = [
     {
       id: 1,
-      title: "AI-Powered Learning Laboratory",
-      description: "Students engaging with interactive AI learning systems at University of Nairobi",
+      title: "Virtual Laboratory Tools",
+      description: "Engaging with interactive AI learning systems",
       category: "Laboratory",
-      location: "University of Nairobi, Kenya"
+
+      imageUrl: imageUrls[2]
     },
     {
       id: 2,
       title: "Digital Engineering Workshop",
       description: "Collaborative engineering design session using advanced simulation tools",
       category: "Workshop",
-      location: "Technical University of Kenya"
+
+      imageUrl: imageUrls[1]
     },
     {
       id: 3,
       title: "STEM Innovation Hub",
       description: "Modern innovation space equipped with cutting-edge engineering tools",
       category: "Infrastructure",
-      location: "Makerere University, Uganda"
+     
+      imageUrl: imageUrls[6]
     },
     {
       id: 4,
       title: "Student Project Showcase",
       description: "Engineering students presenting their AI-assisted design projects",
       category: "Projects",
-      location: "Kigali Institute of Science and Technology"
+      // location: "Kigali Institute of Science and Technology",
+      imageUrl: imageUrls[3]
     },
     {
       id: 5,
       title: "Faculty Training Program",
       description: "Educators learning to integrate digital tools into STEM curriculum",
       category: "Training",
-      location: "University of Dar es Salaam, Tanzania"
+      // location: "University of Dar es Salaam, Tanzania",
+      imageUrl: imageUrls[4]
     },
     {
       id: 6,
       title: "Collaborative Research Space",
       description: "Inter-university research collaboration on sustainable engineering solutions",
       category: "Research",
-      location: "Addis Ababa University, Ethiopia"
+      // location: "Addis Ababa University, Ethiopia",
+      imageUrl: imageUrls[8]
     }
   ];
+
+  const articleImages = {
+    featured: imageUrls[0],
+    inline1: imageUrls[1],
+    inline2: imageUrls[5]
+  };
 
   const relatedArticles = [
     {
@@ -134,7 +161,6 @@ const BlogDetail = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative py-16 bg-gradient-to-r from-slate-900 to-slate-800">
-        {/* Background Pattern */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-slate-900/90"></div>
           <div 
@@ -145,7 +171,6 @@ const BlogDetail = () => {
           ></div>
         </div>
 
-        {/* Breadcrumb */}
         <div className="relative z-20 mb-8">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="flex items-center text-sm text-slate-400">
@@ -158,7 +183,6 @@ const BlogDetail = () => {
           </div>
         </div>
 
-        {/* Article Header */}
         <div className="relative z-20">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="mb-6">
@@ -175,7 +199,6 @@ const BlogDetail = () => {
               {article.excerpt}
             </p>
             
-            {/* Article Meta */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-slate-400">
               <div className="flex items-center">
                 <User className="h-4 w-4 mr-2" />
@@ -199,29 +222,23 @@ const BlogDetail = () => {
         </div>
       </section>
 
-      {/* Article Content */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-            {/* Main Content */}
             <div className="lg:col-span-3">
-              {/* Featured Image */}
               <div className="mb-12">
-                <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg aspect-video mb-4 overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-white">
-                    <div className="text-center">
-                      <Lightbulb className="h-20 w-20 mx-auto mb-4 opacity-80" />
-                      <p className="text-lg font-medium">AI-Powered Learning Innovation</p>
-                      <p className="text-sm opacity-80">Digital transformation in African universities</p>
-                    </div>
-                  </div>
+                <div className="rounded-lg aspect-video mb-4 overflow-hidden">
+                  <img
+                    src={articleImages.featured}
+                    alt="AI-Powered Learning Innovation"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <p className="text-sm text-gray-600 italic">
-                  Students at University of Nairobi engaging with AI-powered engineering education platforms
+                  University students engaging with AI-powered engineering education platforms
                 </p>
               </div>
 
-              {/* Article Text */}
               <div className="prose prose-lg max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-6">
                   The landscape of engineering education across Africa is undergoing a revolutionary transformation. 
@@ -239,16 +256,13 @@ const BlogDetail = () => {
                   and transforming traditional classroom dynamics into interactive, personalized learning environments.
                 </p>
 
-                {/* Inline Image */}
                 <div className="my-10">
-                  <div className="bg-gradient-to-br from-green-500 to-blue-600 rounded-lg aspect-video mb-4 overflow-hidden">
-                    <div className="w-full h-full flex items-center justify-center text-white">
-                      <div className="text-center">
-                        <Users className="h-16 w-16 mx-auto mb-3 opacity-80" />
-                        <p className="text-lg font-medium">Collaborative Learning Environment</p>
-                        <p className="text-sm opacity-80">Interactive STEM workshops and labs</p>
-                      </div>
-                    </div>
+                  <div className="rounded-lg aspect-video mb-4 overflow-hidden">
+                    <img
+                      src={articleImages.inline1}
+                      alt="Collaborative Learning Environment"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <p className="text-sm text-gray-600 italic">
                     Digital engineering workshop at Technical University of Kenya showcasing collaborative problem-solving
@@ -287,19 +301,16 @@ const BlogDetail = () => {
                   </p>
                 </div>
 
-                {/* Another Inline Image */}
                 <div className="my-10">
-                  <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg aspect-video mb-4 overflow-hidden">
-                    <div className="w-full h-full flex items-center justify-center text-white">
-                      <div className="text-center">
-                        <Award className="h-16 w-16 mx-auto mb-3 opacity-80" />
-                        <p className="text-lg font-medium">Excellence in Innovation</p>
-                        <p className="text-sm opacity-80">Award-winning educational solutions</p>
-                      </div>
-                    </div>
+                  <div className="rounded-lg aspect-video mb-4 overflow-hidden">
+                    <img
+                      src={articleImages.inline2}
+                      alt="Excellence in Innovation"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <p className="text-sm text-gray-600 italic">
-                    Recognition ceremony for outstanding student projects at Kigali Institute of Science and Technology
+                    Recognition ceremony for outstanding student projects
                   </p>
                 </div>
 
@@ -321,7 +332,6 @@ const BlogDetail = () => {
                 </p>
               </div>
 
-              {/* Article Footer */}
               <div className="mt-12 pt-8 border-t border-gray-200">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {article.tags.map((tag) => (
@@ -355,10 +365,8 @@ const BlogDetail = () => {
               </div>
             </div>
 
-            {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-8 space-y-8">
-                {/* Author Bio */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <User className="h-8 w-8 text-white" />
@@ -375,7 +383,6 @@ const BlogDetail = () => {
                   </p>
                 </div>
 
-                {/* Related Articles */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Related Articles</h3>
                   <div className="space-y-4">
@@ -399,7 +406,6 @@ const BlogDetail = () => {
         </div>
       </section>
 
-      {/* Project Gallery Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -418,7 +424,12 @@ const BlogDetail = () => {
                 className="group cursor-pointer overflow-hidden rounded-lg bg-white shadow-sm hover:shadow-md transition-all duration-300"
                 onClick={() => openLightbox(index)}
               >
-                <div className="aspect-video bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 relative overflow-hidden">
+                <div className="aspect-video relative overflow-hidden">
+                  <img
+                    src={image.imageUrl}
+                    alt={image.title}
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
                   <div className="absolute inset-0 flex items-center justify-center text-white">
                     <div className="text-center transform group-hover:scale-110 transition-transform duration-300">
@@ -449,11 +460,9 @@ const BlogDetail = () => {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
           <div className="relative max-w-4xl w-full">
-            {/* Close Button */}
             <button
               onClick={closeLightbox}
               className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
@@ -461,7 +470,6 @@ const BlogDetail = () => {
               <X className="h-8 w-8" />
             </button>
             
-            {/* Navigation Buttons */}
             <button
               onClick={prevImage}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 transition-colors"
@@ -476,25 +484,20 @@ const BlogDetail = () => {
               <ChevronRight className="h-8 w-8" />
             </button>
 
-            {/* Image Container */}
-            <div className="bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 rounded-lg aspect-video mb-4 overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center text-white">
-                <div className="text-center">
-                  <Globe className="h-24 w-24 mx-auto mb-4 opacity-80" />
-                  <p className="text-xl font-medium">{selectedImage.title}</p>
-                  <p className="text-sm opacity-80 mt-2">{selectedImage.category}</p>
-                </div>
-              </div>
+            <div className="rounded-lg aspect-video mb-4 overflow-hidden">
+              <img
+                src={selectedImage.imageUrl}
+                alt={selectedImage.title}
+                className="w-full h-full object-cover"
+              />
             </div>
             
-            {/* Image Info */}
             <div className="text-white text-center">
               <h3 className="text-xl font-semibold mb-2">{selectedImage.title}</h3>
               <p className="text-gray-300 mb-2">{selectedImage.description}</p>
               <p className="text-gray-400 text-sm">{selectedImage.location}</p>
             </div>
             
-            {/* Image Counter */}
             <div className="text-center text-gray-400 text-sm mt-4">
               {currentGalleryIndex + 1} of {galleryImages.length}
             </div>
@@ -502,7 +505,6 @@ const BlogDetail = () => {
         </div>
       )}
 
-      {/* Newsletter CTA */}
       <section className="py-20 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
