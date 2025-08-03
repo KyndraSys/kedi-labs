@@ -283,7 +283,7 @@ function Header() {
                     }`} /> */}
                   </button>
                   
-                  {/* {activeDropdown === 'blog' && (
+                   {activeDropdown === 'blog' && (
                     <div className="ml-4 mt-2 space-y-1">
                       <Link
                         to="/blog"
@@ -314,7 +314,7 @@ function Header() {
                         Featured Articles
                       </Link>
                     </div>
-                  )} */}
+                  )}
                 </div>
                 
                 <Link

@@ -29,7 +29,7 @@ const BlogDetail = () => {
     title: "Transforming Engineering Education Through Digital Innovation",
     excerpt: "How AI-powered learning platforms are revolutionizing STEM education across African universities and creating unprecedented access to quality engineering programs.",
     category: "Engineering Education",
-    author: "Dr. Sarah Kimani",
+    author: "Kedi Team",
     authorTitle: "Director of Educational Innovation, Kedi Labs",
     date: "2025-07-20",
     readTime: "8 min read",
