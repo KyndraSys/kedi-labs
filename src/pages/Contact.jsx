@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronRight, Phone, Mail, MapPin, Users, GraduationCap, Building2, Send, CheckCircle, AlertCircle, Loader2, Globe, Clock, MessageSquare } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const KediLabsContact = () => {
   const [activeForm, setActiveForm] = useState('general');
   const [formData, setFormData] = useState({
