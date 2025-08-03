@@ -127,7 +127,7 @@ const Footer = () => {
               <div className="flex space-x-3">
                 <a 
                   href="#" 
-                  target="_blank"
+                 
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                   aria-label="Facebook"
@@ -136,7 +136,7 @@ const Footer = () => {
                 </a>
                 <a 
                   href="#" 
-                  target="_blank"
+                 
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                   aria-label="Twitter"
@@ -145,7 +145,7 @@ const Footer = () => {
                 </a>
                 <a 
                   href="#" 
-                  target="_blank"
+           
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                   aria-label="LinkedIn"
@@ -154,7 +154,7 @@ const Footer = () => {
                 </a>
                 <a 
                   href="#" 
-                  target="_blank"
+                  // target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
                   aria-label="Instagram"
