@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Users, Award, Globe, Lightbulb, BookOpen, Target, ArrowRight, Play, CheckCircle, Star, Zap, Shield, Cpu, Network, Eye, Settings, Microscope, GraduationCap, Cog, FlaskConical, Binary } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-
+import NavigationPills from '../components/NavigationPills';
 const KediLabsHomepage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState({});
@@ -215,17 +215,7 @@ const KediLabsHomepage = () => {
           </div>
         </div>
 
-        {/* Navigation Pills */}
-        <nav className="relative z-20 flex justify-center pt-8">
-          <div className="flex space-x-12 bg-white/10 backdrop-blur-md rounded-full px-12 py-4">
-            <button onClick={() => navigate('/programs')} className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Downloads</button>
-            <button onClick={() => navigate('/programs')} className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Certifications</button>
-            <button onClick={() => navigate('/programs')} className="text-white hover:text-gray-200 transition-colors font-medium text-sm">STEM Validated</button>
-            <button onClick={() => navigate('/programs')} className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Training</button>
-            <button onClick={() => navigate('/blog')} className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Community</button>
-            <button onClick={() => navigate('/contact')} className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Support</button>
-          </div>
-        </nav>
+        <NavigationPills />
 
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">

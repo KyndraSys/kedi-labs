@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Component } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Component, useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -55,10 +55,65 @@ const NotFound = () => (
   </div>
 );
 
+// Component to handle hash navigation and scroll restoration
+const HashScrollHandler = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle hash navigation on route change or page load
+    const handleHashNavigation = () => {
+      const hash = location.hash;
+      if (hash) {
+        // Small delay to ensure the page has rendered
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }, 100);
+      } else {
+        // If no hash, scroll to top (only on route change, not on initial load)
+        if (location.pathname !== '/' || !window.location.hash) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    };
+
+    handleHashNavigation();
+  }, [location]);
+
+  // Handle browser back/forward with hash
+  useEffect(() => {
+    const handlePopState = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }, 100);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
       <ErrorBoundary>
+        <HashScrollHandler />
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
