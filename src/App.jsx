@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Component } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -43,22 +43,48 @@ class ErrorBoundary extends Component {
   }
 }
 
+// 404 Not Found Component
+const NotFound = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="text-center">
+      <h1 className="text-6xl font-bold text-gray-400 mb-4">404</h1>
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">Page Not Found</h2>
+      <p className="text-gray-600 mb-8">The page you're looking for doesn't exist.</p>
+      <Navigate to="/" replace />
+    </div>
+  </div>
+);
+
 function App() {
   return (
     <Router>
       <ErrorBoundary>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/blogdetail" element={<BlogDetail />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} /> {/* Catch-all route */}
-        </Routes>
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/programs" element={<Programs />} />
+              <Route path="/partners" element={<Partners />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/blogdetail" element={<BlogDetail />} />
+              <Route path="/contact" element={<Contact />} />
+              
+              {/* Blog category routes that might be referenced in Header */}
+              <Route path="/blog/category/education" element={<Blog />} />
+              <Route path="/blog/category/technology" element={<Blog />} />
+              <Route path="/blog/category/partnerships" element={<Blog />} />
+              <Route path="/blog/category/research" element={<Blog />} />
+              <Route path="/blog/stem-education-africa" element={<BlogDetail />} />
+              <Route path="/blog/digital-transformation" element={<BlogDetail />} />
+              
+              {/* 404 - Redirect to home instead of showing home content */}
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </ErrorBoundary>
     </Router>
   );

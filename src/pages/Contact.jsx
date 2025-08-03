@@ -26,8 +26,8 @@ const KediLabsContact = () => {
       type: 'Office',
       icon: MapPin,
       title: 'Headquarters',
-      details: 'Kedi Labs Innovation Hub\nWestlands Business District\nP.O. Box 25634-00100\nNairobi, Kenya',
-      link: 'https://maps.google.com/?q=Westlands,Nairobi,Kenya'
+      details: 'Kedi Labs Innovation Hub\nKisumu',
+
     },
     {
       type: 'General',
@@ -40,14 +40,14 @@ const KediLabsContact = () => {
       type: 'Support',
       icon: MessageSquare,
       title: 'Technical Support',
-      details: 'support@kedilabs.net',
-      link: 'mailto:support@kedilabs.net'
+      details: 'contact@kedilabs.net',
+      link: 'mailto:contact@kedilabs.net'
     },
     {
       type: 'Partnerships',
       icon: Building2,
       title: 'Partnerships',
-      details: 'partners@kedilabs.net',
+      details: 'contact@kedilabs.net',
       link: 'mailto:partners@kedilabs.net'
     }
   ];
@@ -266,7 +266,7 @@ const KediLabsContact = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-colors"
-                        placeholder="your@email.com"
+                        placeholder="contact@kedilabs.net"
                       />
                     </div>
                   </div>
@@ -363,33 +363,35 @@ const KediLabsContact = () => {
               Visit Our <span className="text-green-600 font-semibold">Innovation Hub</span>
             </h2>
             <p className="text-lg text-slate-600">
-              Located in the heart of Nairobi's tech ecosystem
+              Located in the heart of Kisumu
             </p>
           </div>
           
           <div className="bg-white rounded-2xl overflow-hidden shadow-xl">
-            <div className="aspect-w-16 aspect-h-9 h-96">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.110725307823!2d36.8062!3d-1.2697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1a6bf7445dc1%3A0x940b62a3c8efde4c!2sWestlands%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1642695234567!5m2!1sen!2ske"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Kedi Labs Location"
-              ></iframe>
-            </div>
-            
-            <div className="p-8 bg-gradient-to-r from-slate-50 to-gray-50">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-teal-600 mr-3" />
-                  <div>
-                    <p className="font-semibold text-slate-800">Address</p>
-                    <p className="text-slate-600">Westlands Business District, Nairobi</p>
-                  </div>
-                </div>
+  <div className="aspect-w-16 aspect-h-9 h-96">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124183.08858011256!2d34.66108667578538!3d-0.018737386036050647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa505cd99a173%3A0x2b61e11f4f6c4374!2sCounty%20Government%20Of%20Kisumu!5e1!3m2!1sen!2ske!4v1754238951876!5m2!1sen!2ske"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Kedi Labs Location"
+    ></iframe>
+  </div>
+  
+  <div className="p-8 bg-gradient-to-r from-slate-50 to-gray-50">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="flex items-center">
+        <MapPin className="h-6 w-6 text-teal-600 mr-3" />
+        <div>
+          <p className="font-semibold text-slate-800">Address</p>
+          <p className="text-slate-600">Kisumu</p>
+        </div>
+      </div>
+
+
                 
                 <div className="flex items-center">
                   <Clock className="h-6 w-6 text-teal-600 mr-3" />
@@ -424,7 +426,7 @@ const KediLabsContact = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:info@kedilabs.net"
+              href="mailto:contact@kedilabs.net"
               className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center"
             >
               <Mail className="h-5 w-5 mr-2" />

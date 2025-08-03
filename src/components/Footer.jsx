@@ -17,17 +17,17 @@ const Footer = () => {
   ];
 
   const programs = [
-    { name: 'Engineering Education', href: '/programs/engineering' },
-    { name: 'Digital Innovation', href: '/programs/digital' },
-    { name: 'Research Initiatives', href: '/programs/research' },
-    { name: 'Partnership Programs', href: '/programs/partnerships' }
+    { name: 'Virtual Labs Toolkits', href: '/programs/' },
+    { name: 'STEM Educator Digital Training', href: '/programs/' },
+    { name: 'Digital Education Policy Advocacy', href: '/programs/' },
+    { name: 'Student-Centered STEM Development ', href: '/programs/' }
   ];
 
   const resources = [
-    { name: 'Featured Articles', href: '/blog/featured' },
-    { name: 'Research Papers', href: '/resources/papers' },
-    { name: 'Case Studies', href: '/resources/cases' },
-    { name: 'White Papers', href: '/resources/whitepapers' }
+    { name: 'Featured Articles', href: '/blog/' },
+    // { name: 'Research Papers', href: '/resources/papers' },
+    // { name: 'Case Studies', href: '/resources/cases' },
+    // { name: 'White Papers', href: '/resources/whitepapers' }
   ];
 
   return (
@@ -52,18 +52,18 @@ const Footer = () => {
               <div className="flex items-center text-sm text-gray-600">
                 <Mail className="h-4 w-4 mr-3 text-gray-400" />
                 <a href="mailto:info@kedilabs.org" className="hover:text-blue-600 transition-colors">
-                  info@kedilabs.org
+                 contact@kedilabs.net
                 </a>
               </div>
               <div className="flex items-center text-sm text-gray-600">
                 <Phone className="h-4 w-4 mr-3 text-gray-400" />
                 <a href="tel:+254700000000" className="hover:text-blue-600 transition-colors">
-                  +254 700 000 000
+                  +254 711731625
                 </a>
               </div>
               <div className="flex items-start text-sm text-gray-600">
                 <MapPin className="h-4 w-4 mr-3 mt-0.5 text-gray-400 flex-shrink-0" />
-                <span>Nairobi, Kenya<br />East Africa</span>
+                <span>Kisumu, Kenya<br />East Africa</span>
               </div>
             </div>
           </div>
@@ -126,7 +126,7 @@ const Footer = () => {
               <h4 className="font-medium text-gray-900 mb-3 text-sm">Follow Us</h4>
               <div className="flex space-x-3">
                 <a 
-                  href="https://facebook.com/kedilabs" 
+                  href="#" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
@@ -135,7 +135,7 @@ const Footer = () => {
                   <Facebook className="h-4 w-4" />
                 </a>
                 <a 
-                  href="https://twitter.com/kedilabs" 
+                  href="#" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
@@ -144,7 +144,7 @@ const Footer = () => {
                   <Twitter className="h-4 w-4" />
                 </a>
                 <a 
-                  href="https://linkedin.com/company/kedilabs" 
+                  href="#" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
@@ -153,7 +153,7 @@ const Footer = () => {
                   <Linkedin className="h-4 w-4" />
                 </a>
                 <a 
-                  href="https://instagram.com/kedilabs" 
+                  href="#" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"

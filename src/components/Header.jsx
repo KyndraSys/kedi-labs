@@ -95,9 +95,9 @@ function Header() {
                   }`}
                 >
                   Blog
-                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                  {/* <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
                     activeDropdown === 'blog' ? 'rotate-180' : ''
-                  }`} />
+                  }`} /> */}
                 </Link>
               </div>
               
@@ -128,7 +128,7 @@ function Header() {
           </div>
         </div>
 
-        {/* Full-Width Blog Dropdown */}
+        {/* Full-Width Blog Dropdown
         {activeDropdown === 'blog' && (
           <div 
             className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-lg z-40"
@@ -137,7 +137,7 @@ function Header() {
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {/* Featured Article */}
+                Featured Article
                 <div className="lg:col-span-2">
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg p-6 h-full">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -171,7 +171,7 @@ function Header() {
                   </div>
                 </div>
 
-                {/* Blog Categories */}
+                {/* Blog Categories 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     Browse by Category
@@ -215,7 +215,7 @@ function Header() {
               </div>
             </div>
           </div>
-        )}
+        )} */}
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
@@ -278,12 +278,12 @@ function Header() {
                     onClick={() => handleMobileDropdownToggle('blog')}
                   >
                     Blog
-                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
+                    {/* <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
                       activeDropdown === 'blog' ? 'rotate-180' : ''
-                    }`} />
+                    }`} /> */}
                   </button>
                   
-                  {activeDropdown === 'blog' && (
+                  {/* {activeDropdown === 'blog' && (
                     <div className="ml-4 mt-2 space-y-1">
                       <Link
                         to="/blog"
@@ -314,7 +314,7 @@ function Header() {
                         Featured Articles
                       </Link>
                     </div>
-                  )}
+                  )} */}
                 </div>
                 
                 <Link
