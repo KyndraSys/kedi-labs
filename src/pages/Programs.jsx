@@ -250,13 +250,7 @@ const KediLabsPrograms = () => {
                       {expandedProgram === program.id ? 'Show less' : 'Learn more'}
                       <ArrowRight className={`ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 ${expandedProgram === program.id ? 'rotate-90' : ''}`} />
                     </button>
-                    <a
-                      href={program.link}
-                      className="inline-flex items-center text-teal-600 hover:text-teal-700 font-medium text-sm transition-colors group"
-                    >
-                      View details
-                      <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                   
                   </div>
                 </div>
               </div>
