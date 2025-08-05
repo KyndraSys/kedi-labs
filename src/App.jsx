@@ -1,15 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { Component, useEffect } from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Programs from './pages/Programs';
-import Partners from './pages/Partners';
-import Blog from './pages/Blog';
-import BlogDetail from './pages/BlogDetail';
-import Contact from './pages/Contact';
-import './index.css';
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+import Home from '@pages/Home';
+import About from '@pages/About';
+import Programs from '@pages/Programs';
+import Partners from '@pages/Partners';
+import Blog from '@pages/Blog';
+import BlogDetail from '@pages/BlogDetail';
+import Contact from '@pages/Contact';
 
 class ErrorBoundary extends Component {
   state = { hasError: false };
