@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { 
   ChevronRight, 
   ArrowRight, 
@@ -16,6 +16,8 @@ import {
 } from 'lucide-react';
 
 const KediPartnersPage = () => {
+  const navigate = useNavigate();
+
   const partnerCategories = [
     {
       id: 'educational',
@@ -94,12 +96,7 @@ const KediPartnersPage = () => {
     }
   ];
 
-  // Navigation handlers
-  const handleNavigation = (path) => {
-    // Direct navigation using window.location
-    window.location.href = path;
-  };
-
+  // External link handler for PDF or external URLs
   const handleExternalLink = (url) => {
     window.open(url, '_blank', 'noopener noreferrer');
   };
@@ -119,12 +116,12 @@ const KediPartnersPage = () => {
         <div className="relative z-20 mb-8">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="flex items-center text-sm text-slate-400">
-              <button 
-                onClick={() => handleNavigation('/')}
-                className="hover:text-cyan-400 transition-colors cursor-pointer"
+              <Link 
+                to="/"
+                className="hover:text-cyan-400 transition-colors"
               >
                 Home
-              </button>
+              </Link>
               <ChevronRight className="h-4 w-4 mx-2" />
               <span className="text-cyan-400 font-medium">Partners</span>
             </div>
@@ -147,13 +144,13 @@ const KediPartnersPage = () => {
                   Discover our network of educational institutions, technology partners, and funding collaborators transforming STEM education across Africa.
                 </p>
 
-                <button 
-                  onClick={() => handleNavigation('/contact')}
+                <Link 
+                  to="/contact"
                   className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center group"
                 >
                   Become a Partner
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </button>
+                </Link>
               </div>
 
               {/* Hero Image */}
@@ -273,13 +270,13 @@ const KediPartnersPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => handleNavigation('/contact')}
+            <Link 
+              to="/contact"
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center justify-center group"
             >
               Apply for Partnership
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </Link>
             
             <button 
               onClick={() => handleExternalLink('/partnership-guide.pdf')}

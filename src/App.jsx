@@ -115,7 +115,6 @@ function App() {
   return (
     <Router>
       <ErrorBoundary>
-        <HashScrollHandler />
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
@@ -127,16 +126,12 @@ function App() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/blogdetail" element={<BlogDetail />} />
               <Route path="/contact" element={<Contact />} />
-              
-              {/* Blog category routes that might be referenced in Header */}
               <Route path="/blog/category/education" element={<Blog />} />
               <Route path="/blog/category/technology" element={<Blog />} />
               <Route path="/blog/category/partnerships" element={<Blog />} />
               <Route path="/blog/category/research" element={<Blog />} />
               <Route path="/blog/stem-education-africa" element={<BlogDetail />} />
               <Route path="/blog/digital-transformation" element={<BlogDetail />} />
-              
-              {/* 404 - Redirect to home instead of showing home content */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
