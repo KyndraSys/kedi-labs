@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Component, useEffect } from 'react';
 import Header from '@components/Header';
 import Footer from '@components/Footer';
@@ -9,6 +9,7 @@ import Partners from '@pages/Partners';
 import Blog from '@pages/Blog';
 import BlogDetail from '@pages/BlogDetail';
 import Contact from '@pages/Contact';
+import './index.css';
 
 class ErrorBoundary extends Component {
   state = { hasError: false };
@@ -26,17 +27,16 @@ class ErrorBoundary extends Component {
       return (
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-           <h1 className="text-2xl font-bold text-red-600 mb-4">Temporal glitch detected!</h1>
-<p className="text-gray-600 mb-4">Looks like reality blinked. Try contacting support below.</p>
-<a
-  href="https://wa.me/254113904796?text=%22Seems%20you%20didn%E2%80%99t%20cook%20well%20enough%2C%22%20Kedi%20Labs."
-  target="_blank"
-  rel="noopener noreferrer"
-  className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
->
-  Contact Support
-</a>
-
+            <h1 className="text-2xl font-bold text-red-600 mb-4">Temporal glitch detected!</h1>
+            <p className="text-gray-600 mb-4">Looks like reality blinked. Try contacting support below.</p>
+            <a
+              href="https://wa.me/254113904796?text=%22Seems%20you%20didn%E2%80%99t%20cook%20well%20enough%2C%22%20Kedi%20Labs."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+            >
+              Contact Support
+            </a>
           </div>
         </div>
       );
@@ -52,7 +52,12 @@ const NotFound = () => (
       <h1 className="text-6xl font-bold text-gray-400 mb-4">404</h1>
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Page Not Found</h2>
       <p className="text-gray-600 mb-8">The page you're looking for doesn't exist.</p>
-      <Navigate to="/" replace />
+      <a
+        href="/"
+        className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+      >
+        Go to Home
+      </a>
     </div>
   </div>
 );
@@ -77,7 +82,7 @@ const HashScrollHandler = () => {
           }
         }, 100);
       } else {
-        // If no hash, scroll to top (only on route change, not on initial load)
+        // Scroll to top on route change, but not on initial load
         if (location.pathname !== '/' || !window.location.hash) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -115,6 +120,7 @@ function App() {
   return (
     <Router>
       <ErrorBoundary>
+        <HashScrollHandler />
         <div className="flex flex-col min-h-screen">
           <Header />
           <main className="flex-grow">
@@ -132,7 +138,7 @@ function App() {
               <Route path="/blog/category/research" element={<Blog />} />
               <Route path="/blog/stem-education-africa" element={<BlogDetail />} />
               <Route path="/blog/digital-transformation" element={<BlogDetail />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />

@@ -9,9 +9,9 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Fallback to index.html for client-side routing (exclude API or specific paths if needed)
-# RewriteCond %{REQUEST_URI} !\.(png|jpg|jpeg|gif|svg|ico|css|js|woff|woff2|ttf|eot|pdf)$
-# RewriteRule ^ /index.html [L]
+# Fallback to index.html for client-side routing, excluding static assets
+RewriteCond %{REQUEST_URI} !\.(png|jpg|jpeg|gif|svg|ico|css|js|woff|woff2|ttf|eot|pdf)$
+RewriteRule ^ /index.html [L]
 
 # Security headers
 <IfModule mod_headers.c>

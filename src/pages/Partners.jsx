@@ -128,30 +128,31 @@ const KediPartnersPage = () => {
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="relative z-20">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
-                  Our Network of{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 font-normal">
-                    Excellence
-                  </span>
-                </h1>
-                
-                <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-                  Discover our network of educational institutions, technology partners, and funding collaborators transforming STEM education across Africa.
-                </p>
 
-                <Link 
-                  to="/contact"
-                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center group"
-                >
-                  Become a Partner
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
+{/* Main Content */}
+<div className="relative z-20">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
+          Our Network of{' '}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 font-normal">
+            Excellence
+          </span>
+        </h1>
+        
+        <p className="text-lg text-slate-300 mb-8 leading-relaxed">
+          Discover our network of educational institutions, technology partners, and funding collaborators transforming STEM education across Africa.
+        </p>
+
+        <Link 
+          to="/contact"
+          className="group bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center justify-center w-fit"
+        >
+          Become a Partner
+          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </div>
 
               {/* Hero Image */}
               <div className="relative">
