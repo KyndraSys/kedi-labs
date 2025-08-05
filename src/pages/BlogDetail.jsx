@@ -162,7 +162,7 @@ const BlogDetail = () => {
       {/* Hero Section */}
       <section className="relative py-16 bg-gradient-to-r from-slate-900 to-slate-800">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-slate-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/90 to-slate-900/90"></div>
           <div 
             className="absolute inset-0 bg-cover bg-center opacity-20"
             style={{
@@ -186,7 +186,7 @@ const BlogDetail = () => {
         <div className="relative z-20">
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="mb-6">
-              <span className="bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium">
+              <span className="bg-green-600 text-white px-3 py-1 rounded-md text-sm font-medium">
                 {article.category}
               </span>
             </div>
@@ -277,7 +277,7 @@ const BlogDetail = () => {
                   Our approach focuses on three critical areas that are driving measurable improvements in engineering education outcomes:
                 </p>
 
-                <div className="bg-gray-50 border-l-4 border-blue-600 p-6 my-8">
+                <div className="bg-gray-50 border-l-4 border-green-600 p-6 my-8">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Adaptive Learning Systems</h3>
                   <p className="text-gray-700">
                     AI algorithms that adapt to individual learning styles and pace, ensuring that every student 
@@ -335,7 +335,7 @@ const BlogDetail = () => {
               <div className="mt-12 pt-8 border-t border-gray-200">
                 <div className="flex flex-wrap gap-2 mb-6">
                   {article.tags.map((tag) => (
-                    <span key={tag} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-md text-sm font-medium">
+                    <span key={tag} className="bg-green-100 text-green-800 px-3 py-1 rounded-md text-sm font-medium">
                       #{tag}
                     </span>
                   ))}
@@ -347,7 +347,7 @@ const BlogDetail = () => {
                       <Heart className="h-4 w-4 mr-1" />
                       {article.likes}
                     </button>
-                    <button className="flex items-center text-gray-600 hover:text-blue-500 transition-colors">
+                    <button className="flex items-center text-gray-600 hover:text-green-500 transition-colors">
                       <MessageCircle className="h-4 w-4 mr-1" />
                       {article.comments}
                     </button>
@@ -357,7 +357,7 @@ const BlogDetail = () => {
                     </button>
                   </div>
                   
-                  <button className="flex items-center text-blue-600 hover:text-blue-700 transition-colors">
+                  <button className="flex items-center text-green-600 hover:text-green-700 transition-colors">
                     <Download className="h-4 w-4 mr-1" />
                     Download PDF
                   </button>
@@ -368,7 +368,7 @@ const BlogDetail = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-8 space-y-8">
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <User className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 text-center mb-2">
@@ -388,7 +388,7 @@ const BlogDetail = () => {
                   <div className="space-y-4">
                     {relatedArticles.map((related) => (
                       <div key={related.id} className="border-b border-gray-200 pb-4 last:border-b-0">
-                        <h4 className="font-medium text-gray-900 hover:text-blue-600 cursor-pointer mb-2 leading-tight">
+                        <h4 className="font-medium text-gray-900 hover:text-green-600 cursor-pointer mb-2 leading-tight">
                           {related.title}
                         </h4>
                         <div className="flex items-center text-xs text-gray-600 space-x-2">
@@ -443,7 +443,7 @@ const BlogDetail = () => {
                 </div>
                 
                 <div className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
                     {image.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-3 leading-relaxed">
@@ -507,8 +507,8 @@ const BlogDetail = () => {
 
       <section className="py-20 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <BookOpen className="h-8 w-8 text-blue-600" />
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <BookOpen className="h-8 w-8 text-green-600" />
           </div>
           
           <h2 className="text-3xl font-normal text-gray-900 mb-6">
@@ -522,9 +522,9 @@ const BlogDetail = () => {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
             />
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors whitespace-nowrap">
+            <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors whitespace-nowrap">
               Subscribe Now
             </button>
           </div>

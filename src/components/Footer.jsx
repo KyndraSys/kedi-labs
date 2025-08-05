@@ -51,13 +51,13 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-600">
                 <Mail className="h-4 w-4 mr-3 text-gray-400" />
-                <a href="mailto:info@kedilabs.org" className="hover:text-blue-600 transition-colors">
+                <a href="mailto:info@kedilabs.org" className="hover:text-green-600 transition-colors">
                  contact@kedilabs.net
                 </a>
               </div>
               <div className="flex items-center text-sm text-gray-600">
                 <Phone className="h-4 w-4 mr-3 text-gray-400" />
-                <a href="tel:+254700000000" className="hover:text-blue-600 transition-colors">
+                <a href="tel:+254700000000" className="hover:text-green-600 transition-colors">
                   +254 711731625
                 </a>
               </div>
@@ -76,7 +76,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <Link 
                     to={link.href}
-                    className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center group"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors flex items-center group"
                   >
                     <ChevronRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -94,7 +94,7 @@ const Footer = () => {
                 <li key={program.name}>
                   <Link 
                     to={program.href}
-                    className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center group"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors flex items-center group"
                   >
                     <ChevronRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {program.name}
@@ -112,7 +112,7 @@ const Footer = () => {
                 <li key={resource.name}>
                   <Link 
                     to={resource.href}
-                    className="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center group"
+                    className="text-sm text-gray-600 hover:text-green-600 transition-colors flex items-center group"
                   >
                     <ChevronRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {resource.name}
@@ -129,7 +129,7 @@ const Footer = () => {
                   href="#" 
                  
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
+                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
                   aria-label="Facebook"
                 >
                   <Facebook className="h-4 w-4" />
@@ -138,7 +138,7 @@ const Footer = () => {
                   href="#" 
                  
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
+                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
                   aria-label="Twitter"
                 >
                   <Twitter className="h-4 w-4" />
@@ -147,7 +147,7 @@ const Footer = () => {
                   href="#" 
            
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
+                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-4 w-4" />
@@ -156,7 +156,7 @@ const Footer = () => {
                   href="#" 
                   // target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors"
+                  className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-4 w-4" />
@@ -177,9 +177,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 text-sm border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 text-sm border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               />
-              <button className="px-6 py-2 bg-blue-600 text-white text-sm font-medium rounded-r-md hover:bg-blue-700 transition-colors">
+              <button className="px-6 py-2 bg-green-600 text-white text-sm font-medium rounded-r-md hover:bg-green-700 transition-colors">
                 Subscribe
               </button>
             </div>
@@ -197,13 +197,13 @@ const Footer = () => {
                 © {currentYear} Kedi Labs. All rights reserved.
               </p>
               <div className="flex space-x-6">
-                <Link to="/privacy" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/privacy" className="text-sm text-gray-600 hover:text-green-600 transition-colors">
                   Privacy Policy
                 </Link>
-                <Link to="/terms" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/terms" className="text-sm text-gray-600 hover:text-green-600 transition-colors">
                   Terms of Service
                 </Link>
-                <Link to="/cookies" className="text-sm text-gray-600 hover:text-blue-600 transition-colors">
+                <Link to="/cookies" className="text-sm text-gray-600 hover:text-green-600 transition-colors">
                   Cookie Policy
                 </Link>
               </div>

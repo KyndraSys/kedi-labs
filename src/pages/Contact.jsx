@@ -16,8 +16,9 @@ const KediLabsContact = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const stakeholderTypes = [
-    { id: 'partner', label: 'Partnership', icon: Building2, description: 'Educational institutions, NGOs, and corporate partners' },
-    { id: 'student', label: 'Student/Learner', icon: GraduationCap, description: 'Students, educators, and individual learners' },
+    { id: 'partner', label: 'Just Connect', icon: Building2, description: 'Connect with Kedi Labs team to get involved in our mission' },
+    { id: 'volunteer', label: 'Volunteer', icon: GraduationCap, description: 'Educators and individual learners who wish to contribute to our mission' },
+    { id: 'volunteer', label: 'Join our events', icon: GraduationCap, description: 'Discover our events to experience being part of the future experts' },
     { id: 'donor', label: 'Donor/Investor', icon: Users, description: 'Funding organizations and impact investors' }
   ];
 
@@ -183,7 +184,7 @@ const KediLabsContact = () => {
                 Join Our <span className="text-green-600 font-semibold">Community</span>
               </h2>
               <p className="text-slate-600 mb-8 leading-relaxed">
-                Select your stakeholder type to get started with the right onboarding process.
+                Kedi Labs team provides a plartform for all our stakeholders to connect, volunteer, donate, or attend our events. Choose your stakeholder type below to get started.
               </p>
               
               <div className="space-y-4">

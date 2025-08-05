@@ -62,7 +62,7 @@ const Blog = () => {
       <section className="relative py-16 bg-gradient-to-r from-slate-900 to-slate-800 overflow-hidden">
         {/* Background Cover Image */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-slate-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-green-900/90 to-slate-900/90"></div>
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{
@@ -95,7 +95,7 @@ const Blog = () => {
               
               <h1 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
                 Engineering{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 font-normal">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400 font-normal">
                   Innovation
                 </span>{' '}
                 Insights
@@ -106,7 +106,7 @@ const Blog = () => {
               </p>
 
               <div className="flex items-center space-x-4">
-                <Link to="/blog/blogdetail" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center group">
+                <Link to="/blog/blogdetail" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center group">
                   Explore Articles
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -133,7 +133,7 @@ const Blog = () => {
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
               />
             </div>
 
@@ -145,7 +145,7 @@ const Blog = () => {
                   onClick={() => setActiveCategory(category.id)}
                   className={`px-4 py-2 rounded-md text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${
                     activeCategory === category.id
-                      ? 'border-blue-500 text-blue-600'
+                      ? 'border-green-500 text-green-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
                 >
@@ -173,7 +173,7 @@ const Blog = () => {
             <article className="group cursor-pointer">
               <Link to="/blog/blogdetail">
                 <div className="bg-gray-100 rounded-lg aspect-video mb-6 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                  <div className="w-full h-full bg-gradient-to-br from-green-500 to-cyan-600 flex items-center justify-center">
                     <div className="text-center text-white">
                       <Microscope className="h-16 w-16 mx-auto mb-4 opacity-80" />
                       <p className="text-sm opacity-80">Featured Article Image</p>
@@ -183,7 +183,7 @@ const Blog = () => {
                 
                 <div className="space-y-3">
                   <div className="flex items-center text-sm text-gray-600 space-x-4">
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium">
+                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium">
                       {featuredPost.category}
                     </span>
                     <div className="flex items-center">
@@ -196,7 +196,7 @@ const Blog = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-medium text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
+                  <h3 className="text-2xl font-medium text-gray-900 group-hover:text-green-600 transition-colors leading-tight">
                     {featuredPost.title}
                   </h3>
                   
@@ -210,7 +210,7 @@ const Blog = () => {
                       {featuredPost.author}
                     </div>
                     
-                    <div className="flex items-center text-blue-600 text-sm font-medium group-hover:text-blue-700">
+                    <div className="flex items-center text-green-600 text-sm font-medium group-hover:text-green-700">
                       Read Article
                       <ArrowRight className="ml-1 h-3 w-3 transition-transform group-hover:translate-x-1" />
                     </div>
@@ -246,7 +246,7 @@ const Blog = () => {
             <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
               <Link to="/blog/blogdetail">
                 <div className="bg-gray-100 aspect-video overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                  <div className="w-full h-full bg-gradient-to-br from-green-500 to-cyan-600 flex items-center justify-center">
                     <div className="text-center text-white">
                       <BookOpen className="h-12 w-12 mx-auto mb-2 opacity-60" />
                       <p className="text-xs opacity-60">Article Image</p>
@@ -256,7 +256,7 @@ const Blog = () => {
                 
                 <div className="p-6 space-y-4">
                   <div className="flex items-center text-xs text-gray-600 space-x-3">
-                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded font-medium">
+                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded font-medium">
                       {featuredPost.category}
                     </span>
                     <div className="flex items-center">
@@ -265,7 +265,7 @@ const Blog = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
+                  <h3 className="text-lg font-medium text-gray-900 group-hover:text-green-600 transition-colors leading-tight">
                     {featuredPost.title}
                   </h3>
                   
@@ -307,8 +307,8 @@ const Blog = () => {
       {/* Newsletter Signup */}
       <section className="py-20 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <BookOpen className="h-8 w-8 text-blue-600" />
+          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <BookOpen className="h-8 w-8 text-green-600" />
           </div>
           
           <h2 className="text-3xl font-normal text-gray-900 mb-6">
@@ -322,11 +322,11 @@ const Blog = () => {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
             />
             <Link 
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors whitespace-nowrap text-center"
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors whitespace-nowrap text-center"
             >
               Subscribe Now
             </Link>
