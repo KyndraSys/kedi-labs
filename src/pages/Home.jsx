@@ -14,12 +14,12 @@ const KediLabsHomepage = () => {
   {
     title: "Advocating for Digital STEM Education in Kenya",
     subtitle: "Driving policy change and investment in Kenya's STEM education sector, championing digital learning opportunities for schools, teachers, and students across the country.",
-    image: "https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
   },
   {
     title: "Training STEM Educators & Students in Kenya",
     subtitle: "Equipping Kenyan educators and STEM learners with cutting-edge digital teaching skills, hands-on training, and sensitization programs that prepare the next generation of innovators.",
-    image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    image: "https://hvaa0fgs9i.ufs.sh/f/dnBu1xMbtIQ0iG0h3QLWHywEnTc0bSzVxR4KgXYaBIMudqjA"
   },
   {
     title: "Expanding Access with Virtual Labs & Toolkits",
