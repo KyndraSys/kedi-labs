@@ -17,10 +17,10 @@ function Header() {
     <>
       <header className="bg-white shadow-sm border-b border-gray-200 relative z-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <Link to="/" className="flex items-center">
-              <img src={logo} alt="Kedi Labs" className="h-10 w-auto" />
+              <img src={logo} alt="Kedi Labs" className="h-16 w-auto" />
             </Link>
 
             {/* Desktop Navigation */}

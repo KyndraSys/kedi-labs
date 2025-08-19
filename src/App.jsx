@@ -8,7 +8,7 @@ import About from '@pages/About';
 import Programs from '@pages/Programs';
 import Partners from '@pages/Partners';
 import Blog from '@pages/Blog';
-import BlogDetail from '@pages/BlogDetail';
+import DigitalTransformation from '@pages/DigitalTransformation';
 import Contact from '@pages/Contact';
 import './index.css';
 
@@ -166,14 +166,13 @@ function App() {
               <Route path="/programs" element={<Programs />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/blog" element={<Blog />} />
-              <Route path="/blog/blogdetail" element={<BlogDetail />} />
+              <Route path="/blog/digital-transformation" element={<DigitalTransformation />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blog/category/education" element={<Blog />} />
               <Route path="/blog/category/technology" element={<Blog />} />
               <Route path="/blog/category/partnerships" element={<Blog />} />
               <Route path="/blog/category/research" element={<Blog />} />
-              <Route path="/blog/stem-education-africa" element={<BlogDetail />} />
-              <Route path="/blog/digital-transformation" element={<BlogDetail />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

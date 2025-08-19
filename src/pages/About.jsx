@@ -10,6 +10,8 @@ const KediLabsAbout = () => {
     setActiveSection(activeSection === section ? null : section);
   };
 
+  
+
   const milestones = [
     { year: "2021", title: "Foundation & Vision", description: "Kedi Labs established in Nairobi with a bold vision to transform STEM education across Africa through innovative digital solutions" },
     { year: "2022", title: "Community Building", description: "Launched our first virtual labs pilot program, engaging 25 educational institutions and building our foundational educator network" },
@@ -69,7 +71,7 @@ const KediLabsAbout = () => {
           {/* Futuristic background image */}
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+              src="https://hvaa0fgs9i.ufs.sh/f/dnBu1xMbtIQ0iG0h3QLWHywEnTc0bSzVxR4KgXYaBIMudqjA"
               alt="Futuristic Technology Lab"
               className="w-full h-full object-cover opacity-60"
             />

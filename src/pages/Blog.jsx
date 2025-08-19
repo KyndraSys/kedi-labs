@@ -106,7 +106,7 @@ const Blog = () => {
               </p>
 
               <div className="flex items-center space-x-4">
-                <Link to="/blog/blogdetail" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center group">
+                <Link to="/blog/digital-transformation" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center group">
                   Explore Articles
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -162,16 +162,16 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-12">
             <h2 className="text-3xl font-normal text-gray-900 mb-4">
-              Featured Article
+              Featured News Article
             </h2>
             <p className="text-lg text-gray-600">
-              Latest insights from our engineering education research and innovation initiatives
+              Latest news on programs from our engineering education research and innovation initiatives
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto mb-16">
             <article className="group cursor-pointer">
-              <Link to="/blog/blogdetail">
+              <Link to="/blog/digital-transformation">
                 <div className="bg-gray-100 rounded-lg aspect-video mb-6 overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-br from-green-500 to-cyan-600 flex items-center justify-center">
                     <div className="text-center text-white">
@@ -244,7 +244,7 @@ const Blog = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group cursor-pointer">
-              <Link to="/blog/blogdetail">
+              <Link to="/blog/digital-transformation">
                 <div className="bg-gray-100 aspect-video overflow-hidden">
                   <div className="w-full h-full bg-gradient-to-br from-green-500 to-cyan-600 flex items-center justify-center">
                     <div className="text-center text-white">
@@ -315,25 +315,21 @@ const Blog = () => {
             Stay Updated with STEM Innovation
           </h2>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Get the latest insights on engineering education, sustainability innovations, and African STEM breakthroughs delivered to your inbox.
+            Get the latest insights on our programs as partner, donor, or volunteer.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-green-500"
-            />
+           
             <Link 
               to="/contact"
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md font-medium transition-colors whitespace-nowrap text-center"
             >
-              Subscribe Now
+              Contact Form
             </Link>
           </div>
           
           <p className="text-sm text-gray-500 mt-4">
-            Join 5,000+ educators and innovators. Unsubscribe anytime.
+            Join 5,000+ educators and innovators.
           </p>
         </div>
       </section>

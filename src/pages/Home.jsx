@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Users, Award, Globe, Lightbulb, BookOpen, Target, ArrowRight, Play, CheckCircle, Star, Zap, Shield, Cpu, Network, Eye, Settings, Microscope, GraduationCap, Cog, FlaskConical, Binary } from 'lucide-react';
+import { ChevronRight, Users, Award, Globe, Lightbulb, BookOpen, Megaphone, ArrowRight, Play, CheckCircle, Star, Zap, Shield, Cpu, Network, Eye, Settings, Microscope, GraduationCap, Cog, FlaskConical, Binary } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import NavigationPills from '../components/NavigationPills';
+
 const KediLabsHomepage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState({});
@@ -10,22 +11,22 @@ const KediLabsHomepage = () => {
   const navigate = useNavigate();
 
   const heroSlides = [
-    {
-      title: "Digitizing STEM Education Across Kenya",
-      subtitle: "Advocating for digital education policy, providing comprehensive STEM training, and delivering virtual labs toolkit supply to transform learning experiences for educators and students.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-    },
-    {
-      title: "Empowering STEM Educators Through Digital Training",
-      subtitle: "Comprehensive training and sensitization programs designed to equip STEM educators with cutting-edge digital teaching methodologies and virtual laboratory techniques.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-    },
-    {
-      title: "Virtual Labs & Digital Learning Toolkit Supply",
-      subtitle: "Providing accessible virtual laboratory solutions and digital learning toolkits that bring advanced STEM education capabilities directly to schools and institutions across Kenya.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
-    }
-  ];
+  {
+    title: "Advocating for Digital STEM Education in Kenya",
+    subtitle: "Driving policy change and investment in Kenya's STEM education sector, championing digital learning opportunities for schools, teachers, and students across the country.",
+    image: "https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    title: "Training STEM Educators & Students in Kenya",
+    subtitle: "Equipping Kenyan educators and STEM learners with cutting-edge digital teaching skills, hands-on training, and sensitization programs that prepare the next generation of innovators.",
+    image: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+  },
+  {
+    title: "Expanding Access with Virtual Labs & Toolkits",
+    subtitle: "Delivering virtual science labs and digital learning toolkits to schools and institutions across Kenya, bridging the digital divide and unlocking world-class STEM education for all.",
+    image: "https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+  }
+];
 
   const impactStats = [
     { number: "1,000+", label: "Targeted trained STEM educators", icon: <Users className="h-8 w-8" /> },
@@ -44,15 +45,10 @@ const KediLabsHomepage = () => {
     {
       icon: <Shield className="h-12 w-12" />,
       title: "STEM Educator Training Programs",
-      description: "Comprehensive training and sensitization programs for STEM educators, equipping them with modern digital teaching methodologies and virtual laboratory skills.",
+      description: "Comprehensive training and sensitization programs for STEM educators and students in Kenya and beypond.",
       color: "from-[#379504] to-[#008B8B]"
     },
-    {
-      icon: <Network className="h-12 w-12" />,
-      title: "STEM Student Development",
-      description: "Specialized training programs for STEM students, providing hands-on experience with digital learning tools and virtual laboratory environments.",
-      color: "from-[#36454F] to-[#379504]"
-    },
+    
     {
       icon: <FlaskConical className="h-12 w-12" />,
       title: "Virtual Labs & Digital Toolkit Supply",
@@ -62,63 +58,21 @@ const KediLabsHomepage = () => {
   ];
 
   const technologyCategories = [
-    {
-      icon: <Binary className="h-16 w-16" />,
-      title: "Virtual Laboratory Solutions",
-      description: "Complete virtual labs toolkit for hands-on STEM learning experiences"
-    },
-    {
-      icon: <GraduationCap className="h-16 w-16" />,
-      title: "Educator Training Programs",
-      description: "Comprehensive training and sensitization for STEM educators"
-    },
-    {
-      icon: <Eye className="h-16 w-16" />,
-      title: "Policy Advocacy",
-      description: "Digital education policy development and STEM investment advocacy"
-    },
-    {
-      icon: <Cog className="h-16 w-16" />,
-      title: "Digital Learning Toolkits",
-      description: "Complete digital learning toolkit supply and implementation"
-    },
-    {
-      icon: <Target className="h-16 w-16" />,
-      title: "Student Development",
-      description: "Specialized STEM student training and skill development programs"
-    },
-    {
-      icon: <Shield className="h-16 w-16" />,
-      title: "Education Technology",
-      description: "Modern educational technology solutions for STEM learning"
-    }
-  ];
-
-  const featuredPrograms = [
-    {
-      title: "Virtual Labs Toolkit Implementation Across Kenyan Schools",
-      description: "Comprehensive virtual laboratory solutions being deployed to schools nationwide, providing hands-on STEM learning experiences without physical infrastructure constraints.",
-      link: "Explore virtual labs program",
-      image: "https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySpJd3OqCJ1QwsdRZ4V8Y9rc0AUkWXjLbotxDu"
-    },
-    {
-      title: "STEM Educator Digital Training Initiative",
-      description: "Intensive training and sensitization programs for STEM educators, focusing on digital pedagogy and virtual laboratory instruction techniques.",
-      link: "Learn about educator training",
-      image: "https://l0kbxarjd9.ufs.sh/f/GBNtWc6jN1ySz4EOOg9xZSQRAhT1skLN32yGtOK6VwfcIiej"
-    },
-    {
-      title: "Digital Education Policy Advocacy Framework",
-      description: "Strategic advocacy efforts promoting digital education policy development and increased government investment in STEM education infrastructure.",
-      link: "Discover policy initiatives",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      title: "Student-Centered STEM Development Programs",
-      description: "Specialized training programs designed specifically for STEM students, enhancing their practical skills through digital learning toolkit utilization.",
-      link: "View student programs",
-      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-    }
+  {
+    icon: <Megaphone className="h-16 w-16" />,
+    title: "Policy Advocacy",
+    description: "Championing digital education policy and driving investment in STEM across Kenya."
+  },
+  {
+    icon: <GraduationCap className="h-16 w-16" />,
+    title: "STEM Educator & Student Training",
+    description: "Capacity-building programs that equip STEM educators and learners with essential digital skills."
+  },
+  {
+    icon: <FlaskConical className="h-16 w-16" />,
+    title: "Virtual Labs & Digital Toolkits",
+    description: "Providing schools and institutions with accessible virtual laboratories and digital learning toolkits."
+  }
   ];
 
   useEffect(() => {
@@ -191,26 +145,27 @@ const KediLabsHomepage = () => {
               <p className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-12 leading-relaxed max-w-4xl font-light animate-slide-up delay-200">
                 {heroSlides[currentSlide].subtitle}
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 animate-slide-up delay-400">
-                <button 
-                  onClick={() => navigate('/programs')}
-                  className="group relative bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-cyan-500/25 overflow-hidden"
-                >
-                  <span className="relative z-10 flex items-center">
-                    Explore Virtual Labs Solutions
-                    <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
-                
-                <button 
-                  onClick={() => navigate('/contact')}
-                  className="group border-2 border-slate-600 hover:border-teal-400 text-slate-300 hover:text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center backdrop-blur-sm bg-slate-800/20 hover:bg-slate-700/30"
-                >
-                  Request Training Program Demo
-                  <ChevronRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-teal-400" />
-                </button>
-              </div>
+             <div className="flex flex-col sm:flex-row gap-6 animate-slide-up delay-400">
+  <button 
+    onClick={() => navigate('/programs')}
+    className="group relative bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-green-500/25 overflow-hidden"
+  >
+    <span className="relative z-10 flex items-center">
+    Learn more about our programs
+      <ArrowRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+    </span>
+    <div className="absolute inset-0 bg-gradient-to-r from-green-700 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  </button>
+  
+  <button 
+    onClick={() => navigate('/contact')}
+    className="group border-2 border-slate-600 hover:border-emerald-400 text-slate-300 hover:text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center justify-center backdrop-blur-sm bg-slate-800/20 hover:bg-slate-700/30"
+  >
+    Inquire from us
+    <ChevronRight className="ml-3 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-emerald-400" />
+  </button>
+</div>
+
             </div>
           </div>
         </div>
@@ -260,7 +215,7 @@ const KediLabsHomepage = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-              Browse by technology
+              Our Programs
             </h2>
           </div>
           
@@ -301,190 +256,70 @@ const KediLabsHomepage = () => {
         </div>
       </section>
 
-      {/* Featured Programs Section */}
-      <section id="featured-programs" className="py-24 bg-gradient-to-b from-gray-50 to-white">
+      {/* Welcoming Partners Section */}
+      <section id="welcoming-partners" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <div className="mb-4">
-              <span className="text-teal-600 text-sm font-semibold uppercase tracking-wider">Latest Updates</span>
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-light text-slate-800 mb-6">
-              Innovation from Kedi Labs
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              Welcoming Partners
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Discover our latest breakthroughs in digital STEM education and virtual laboratory implementation
+              Join our mission to transform STEM education across Kenya
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredPrograms.map((program, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-gray-100">
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={program.image} 
-                    alt=""
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                      New
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="mb-4">
-                    <span className="inline-block bg-gradient-to-r from-teal-100 to-green-100 text-teal-600 text-xs font-medium px-3 py-1 rounded">
-                      Training Program
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-700 mb-4 leading-tight group-hover:text-teal-600 transition-colors">
-                    {program.title}
-                  </h3>
-                  <button 
-                    onClick={() => navigate('/programs')} 
-                    className="text-orange-500 font-medium text-sm hover:text-orange-400 transition-colors flex items-center group"
-                  >
-                    {program.link}
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <GraduationCap className="h-8 w-8 text-blue-600" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Higher Education</h3>
+              <p className="text-gray-600">Partner with universities and colleges</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Globe className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Development Partners</h3>
+              <p className="text-gray-600">Collaborate with donors and NGOs</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Government</h3>
+              <p className="text-gray-600">Work with Ministry of Education</p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Lightbulb className="h-8 w-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Innovation Community</h3>
+              <p className="text-gray-600">Connect with tech innovators</p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <button 
+              onClick={() => navigate('/contact')}
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 mr-4"
+            >
+              Become a Partner
+            </button>
+            <button 
+              onClick={() => navigate('/partners')}
+              className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300"
+            >
+              View Partnership Options
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Our Most Popular Launches Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-100 to-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-start justify-between">
-            <div className="lg:w-1/3 mb-12 lg:mb-0">
-              <h2 className="text-6xl font-light text-slate-800 mb-8 leading-tight">
-                KEDI Labs <span className="text-green-600 font-semibold">Innovation</span>
-              </h2>
-              <p className="text-2xl font-light text-slate-600 mb-6">
-                Our most impactful digital education solutions
-              </p>
-              <div className="w-16 h-1 bg-gradient-to-r from-green-600 to-teal-600 rounded-full"></div>
-            </div>
-            <div className="lg:w-2/3 lg:pl-16">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div className="group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-teal-600 to-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
-                      <Binary className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-4 group-hover:text-teal-600 transition-colors">Virtual Laboratory Platform</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">
-                    Deploy comprehensive virtual laboratory environments designed specifically for Kenyan STEM education contexts, enabling hands-on learning without physical constraints.
-                  </p>
-                  <button 
-                    onClick={() => navigate('/programs')} 
-                    className="text-orange-500 font-medium hover:text-orange-400 transition-colors flex items-center group"
-                  >
-                    Explore virtual lab solutions
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
-                </div>
-                <div className="group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
-                      <Eye className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-4 group-hover:text-teal-600 transition-colors">Educator Training Dashboard</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">
-                    Comprehensive training management system tracking educator progress, sensitization outcomes, and digital pedagogy skill development across Kenya.
-                  </p>
-                  <button 
-                    onClick={() => navigate('/programs')} 
-                    className="text-orange-500 font-medium hover:text-orange-400 transition-colors flex items-center group"
-                  >
-                    Discover Training Solutions
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
-                </div>
-                <div className="group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
-                      <FlaskConical className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-4 group-hover:text-teal-600 transition-colors">Digital Learning Toolkit Suite</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">
-                    Experience our comprehensive digital learning toolkit—where policy advocacy meets practical implementation through virtual laboratories and educator training.
-                  </p>
-                  <button 
-                    onClick={() => navigate('/programs')} 
-                    className="text-orange-500 font-medium hover:text-orange-400 transition-colors flex items-center group"
-                  >
-                    Learn about Digital Toolkit
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
-                <div className="group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-slate-700 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
-                      <Cog className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-4 group-hover:text-teal-600 transition-colors">Policy Advocacy Systems</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">
-                    Deploy strategic advocacy frameworks designed for digital education policy development and STEM investment promotion across Kenya.
-                  </p>
-                  <button 
-                    onClick={() => navigate('/about')} 
-                    className="text-orange-500 font-medium hover:text-orange-400 transition-colors flex items-center group"
-                  >
-                    Explore Policy Initiatives
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
-                </div>
-                <div className="group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-teal-600 to-green-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
-                      <GraduationCap className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-4 group-hover:text-teal-600 transition-colors">STEM Training for Digital Schools</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">
-                    Deliver exceptional STEM training performance for primary schools, secondary schools, and higher learning institutions across Kenya.
-                  </p>
-                  <button 
-                    onClick={() => navigate('/programs')} 
-                    className="text-orange-500 font-medium hover:text-orange-400 transition-colors flex items-center group"
-                  >
-                    Explore training solutions
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
-                </div>
-                <div className="group">
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-slate-700 rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
-                      <Network className="h-6 w-6 text-white" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-slate-800 mb-4 group-hover:text-teal-600 transition-colors">Educational Intelligence + Kedi Insights</h3>
-                  <p className="text-slate-600 mb-6 leading-relaxed">
-                    Unify perspectives across training programs, virtual lab implementation, and policy advocacy outcomes for comprehensive educational transformation.
-                  </p>
-                  <button 
-                    onClick={() => navigate('/about')} 
-                    className="text-orange-500 font-medium hover:text-orange-400 transition-colors flex items-center group"
-                  >
-                    Explore intelligence integrations
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">

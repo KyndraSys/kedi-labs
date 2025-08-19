@@ -39,7 +39,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <Link to="/">
-                <img src={logo} alt="Kedi Labs" className="h-10 w-auto mb-4" />
+                <img src={logo} alt="Kedi Labs" className="h-16 w-auto mb-4" />
               </Link>
               <p className="text-gray-600 text-sm leading-relaxed">
                 Transforming STEM education across Africa through innovative partnerships, 
@@ -166,25 +166,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <div className="max-w-md">
-            <h3 className="font-semibold text-gray-900 mb-2">Stay Updated</h3>
-            <p className="text-sm text-gray-600 mb-4">
-              Get the latest insights on STEM education and innovation in Africa.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 text-sm border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-              />
-              <button className="px-6 py-2 bg-green-600 text-white text-sm font-medium rounded-r-md hover:bg-green-700 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       {/* Bottom Footer */}
@@ -209,10 +191,9 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Your Signature - Powered by */}
             <div className="powered-by flex justify-center items-center space-x-3">
               <span className="text-black hover:text-[#ff6200] hover:text-shadow-[0_0_5px_#ff6200,0_0_10px_#ff6200] text-sm transition-colors">
-                Powered by
+              Designed by
               </span>
               <a 
                 href="https://kyndrasystems.com" 

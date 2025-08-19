@@ -1,12 +1,21 @@
 kedi-labs/
+├── api/
+│   ├── contact.js                    # Form submission handler
+│   ├── admin/
+│   │   ├── login.js                 # Admin authentication
+│   │   ├── submissions.js           # Get submissions
+│   │   └── delete-submission.js     # Delete specific submission
+│   └── health.js                    # Health check endpoint
 ├── public/
 │   ├── llms.txt
 │   ├── robots.txt
 │   ├── favicon.ico
 │   ├── logo.svg
+│   └── admin/                       # Admin static assets
+│       └── .gitkeep
 ├── src/
 │   ├── assets/
-│   │   ├── logo.png
+│   │   └── logo.png
 │   ├── components/
 │   │   ├── Header.jsx
 │   │   ├── Footer.jsx
@@ -15,77 +24,89 @@ kedi-labs/
 │   │   ├── ValueProposition.jsx
 │   │   ├── ImpactStats.jsx
 │   │   ├── ProgramCard.jsx
+│   │   └── admin/                   # Admin-specific components
+│   │       ├── LoginForm.jsx
+│   │       ├── SubmissionCard.jsx
+│   │       ├── StatsPanel.jsx
+│   │       └── ExportButton.jsx
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
 │   │   ├── Programs.jsx
 │   │   ├── Partners.jsx
 │   │   ├── Blog.jsx
-│   │   ├── Contact.jsx
+│   │   ├── Contact.jsx              # Updated contact form
+│   │   └── AdminDashboard.jsx       # New admin dashboard
+│   ├── utils/
+│   │   ├── api.js                   # API client utilities
+│   │   ├── validation.js            # Form validation helpers
+│   │   └── constants.js             # App constants
+│   ├── hooks/
+│   │   ├── useAuth.js              # Authentication hook
+│   │   └── useSubmissions.js        # Submissions data hook
 │   ├── App.jsx
 │   ├── main.jsx
-│   ├── index.css
-├── .github/
-│   ├── workflows/
-│   │   ├── deploy.yml
-├── README.md
-├── vite.config.js
+│   └── index.css
+├── lib/
+│   ├── kv.js                       # Vercel KV database utilities
+│   ├── email.js                    # Email service utilities
+│   ├── validation.js               # Server-side validation
+│   └── auth.js                     # Authentication utilities
+├── .env.local                      # Local environment variables
+├── .env.example                    # Environment variables template
+├── vercel.json                     # Vercel configuration
 ├── package.json
 ├── tailwind.config.js
 ├── postcss.config.js
+├── vite.config.js
+└── README.md
 
+## Key Files Overview
 
+### API Routes (Serverless Functions)
+- `api/contact.js` - Handles form submissions with validation and email notifications
+- `api/admin/login.js` - Secure admin authentication with rate limiting
+- `api/admin/submissions.js` - Fetches submissions with pagination and filtering
+- `api/admin/delete-submission.js` - Secure submission deletion
+- `api/health.js` - System health and monitoring endpoint
 
- {/* Navigation Pills */}
-        <nav className="relative z-20 flex justify-center pt-8">
-          <div className="flex space-x-12 bg-white/10 backdrop-blur-md rounded-full px-12 py-4">
-            <a href="#programs" className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Downloads</a>
-            <a href="#research" className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Certifications</a>
-            <a href="#partnerships" className="text-white hover:text-gray-200 transition-colors font-medium text-sm">STEM Validated</a>
-            <a href="#impact" className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Training</a>
-            <a href="#support" className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Community</a>
-            <a href="#support" className="text-white hover:text-gray-200 transition-colors font-medium text-sm">Support</a>
-          </div>
-        </nav>
+### Frontend Structure
+- `src/pages/Contact.jsx` - Dynamic contact form with stakeholder-specific fields
+- `src/pages/AdminDashboard.jsx` - Comprehensive admin interface
+- `src/components/admin/` - Reusable admin components
+- `src/hooks/` - Custom React hooks for data management
+- `src/utils/` - Client-side utilities and API helpers
 
+### Backend Utilities
+- `lib/kv.js` - Vercel KV database operations
+- `lib/email.js` - Email service integration (Resend)
+- `lib/validation.js` - Server-side data validation
+- `lib/auth.js` - Authentication and security utilities
 
-        
-      {/* Technology Categories */}
-      <section id="technology-categories" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-              Browse by technology
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {technologyCategories.map((category, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className="bg-white border-2 border-gray-100 rounded-3xl p-8 text-center hover:border-blue-200 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="flex justify-center mb-6">
-                    <div className="p-4 text-blue-500 group-hover:text-blue-600 transition-colors">
-                      {category.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
-                    {category.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {category.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center space-x-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-              View all programs
-            </button>
-            <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300">
-              Why Kedi Labs for the digital era
-            </button>
-          </div>
-        </div>
-      </section>
+### Configuration Files
+- `vercel.json` - Vercel deployment and routing configuration
+- `.env.local` - Local development environment variables
+- `.env.example` - Template for required environment variables
+
+## Environment Variables Required
+
+```bash
+# Email Service (Resend)
+RESEND_API_KEY=re_xxxxxxxxxx
+
+# Vercel KV Database
+KV_REST_API_URL=https://xxxxxxxxxx.kv.vercel-storage.com
+KV_REST_API_TOKEN=AXXXXXxxxxxxxxxxxxxx
+
+# Admin Authentication
+ADMIN_PASSWORD_HASH=sha256_hash_of_your_password
+JWT_SECRET=your_secure_jwt_secret
+
+# Site Configuration
+SITE_URL=https://kedilabs.net
+ADMIN_EMAIL=admin@kedilabs.net
+FROM_EMAIL=noreply@kedilabs.net
+
+# Security
+RATE_LIMIT_WINDOW=900000
+RATE_LIMIT_MAX_REQUESTS=10
