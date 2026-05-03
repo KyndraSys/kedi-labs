@@ -191,19 +191,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="powered-by flex justify-center items-center space-x-3">
-              <span className="text-black hover:text-[#ff6200] hover:text-shadow-[0_0_5px_#ff6200,0_0_10px_#ff6200] text-sm transition-colors">
-              Designed by
-              </span>
-              <a 
-                href="https://kyndrasystems.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-black hover:text-[#ff6200] transition-colors"
-              >
-                <img src={kyndra} alt="Kyndra Systems" className="h-6" />
-              </a>
-            </div>
+           
           </div>
         </div>
       </div>
